@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/lightbox.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <title>VTS Homes | Welcome</title>
+</head>
+<body>
+  <!--Navbar-->
+  <header id="home" class="hero">
+    <div id="navbar" class="navbar">
+      <h1 class="logo">
+        <img src="/img/vtslogo.png" alt="logo">
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--Hero-->
+    <div class="hero-content">
+      <h1>Custom Building</h1>
+      <p>Where Value meets Tradition and Stability</p>
+      <a class="btn" href="#about">Read More</a>
+    </div>
+  </header>
+  <!--About-->
+  <main>
+    <section id="about" class="about">
+        <div class="about-content bg-primary">
+          <h3>Your premier custom home builder with unbeatable quality, beauty, and design.</h3>
+          <p>Homes built by VTS Homes are designed and crafted to maintain the traditions of quality and character that are indicative of established, traditional neighborhoods. Exceptional craftsmanship, engaging, elegant interiors and gracious style are hallmarks of a VTS Home.</p>
+          </div>
+      </div>
+    </section>
+    <!--Portfolio-->
+    <section id="portfolio" class="portfolio flex-grid section-padding">
+      <header class="section-header">
+        <h2>Projects</h2>
+        <p>building homes to be superior, timeless in design, and a stable investment</p>
+      </header>
+      <div class="row">
+        <div class="column">
+          <a href="/img/blackkitchen.jpg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/blackkitchen.jpg" alt="">
+          </a>
+          <a href="/img/bathroom.jpg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur"></a>
+            <img src="/img/bathroom.jpg" alt="">
+          </a>
+        </div>
+        <div class="column">
+          <a href="/img/parking.jpeg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/parking.jpeg" alt="">
+          </a>
+          <a href="/img/garage.jpeg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/garage.jpeg" alt="">
+          </a>
+        </div>
+        <div class="column">
+          <a href="/img/entry.jpg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/entry.jpg" alt="">
+          </a>
+          <a href="/img/grandkitchen.jpeg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/grandkitchen.jpeg" alt="">
+          </a>
+        </div>
+        <div class="column">
+          <a href="/img/greatroom.jpeg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/greatroom.jpeg" alt="">
+          </a>
+          <a href="/img/spacetoroam.jpg" data-lightbox="projects" data-title="lorem ipsum dolor sit, amet consectetur">
+            <img src="/img/spacetoroam.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--Contact-->
+    <section id="contact" class="contact">
+      <header class="section-header">
+        <h2>Get In Touch</h2>
+      </header>
+      <form action="process.php" class="contact-form">
+        <div class="form-control">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Enter name">
+        </div>
+        <div class="form-control">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Enter email">
+        </div>
+        <div class="form-control">
+          <label for="phone"></label>
+          <input type="text" id="phone" name="phone" placeholder="Enter phone number">
+        </div>
+        <input type="submit" value="Send" id="submit" class="btn">
+      </form>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="main-footer bg-secondary">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy 2022</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script>
+    //smooth scrolling
+    $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          800
+        );
+      }
+    });
+  </script>
+</body>
+</html>
